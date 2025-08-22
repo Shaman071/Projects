@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       
+         body{
+            background-color:var( --bg-color);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px 40px ;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            transition: background-color 0.3s ease-in-out;
+
+         }
+         h1{
+            background-color: blueviolet;
+             
+            margin-bottom: 20px;
+         }
+         .color-picker{
+            background-color: antiquewhite;
+             padding: 20px;
+            border: 2px solid #333;
+           
+            border-radius: 8px;
+            cursor: pointer;
+            
+         }
+    </style>
+</head>
+<body>
+    <h1>Pick a Color to Change The background</h1>
+    <input type="color" class="color-picker">
+    
+     <script>
+         
+        const colorpicker=document.querySelector(".color-picker")
+        colorpicker.addEventListener("input",(event)=>{
+            const selectedcolor=event.target.value;
+            document.documentElement.style.setProperty("--bg-color",selectedcolor)
+        })
+        
+
+     </script>
+    
+</body>
+</html>

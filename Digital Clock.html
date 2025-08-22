@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #1d2671, #c33764);
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+        }
+        .clock{
+            color: white;
+            font-size: 60px;
+            font-weight: bold;
+            background: rgb(0.1,1,0.4,0.4);
+            padding: 20px 40px;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="clock" id="clock">00:00:00</div>
+    <script >
+        
+        const clock1=document.getElementById("clock")
+        function updateclock(){
+            const now=new Date();
+            const hour=String(now.getHours()).padStart(2,'0');
+            const min=String(now.getMinutes()).padStart(2,'0');
+            const sec=String(now.getSeconds()).padStart(2,'0');
+            clock1.textContent=`${hour}:${min}:${sec}`;
+
+        }
+        updateclock();
+        setInterval(updateclock,1000)
+    </script>
+</body>
+</html>
