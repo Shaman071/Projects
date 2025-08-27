@@ -1,0 +1,110 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+}
+
+/* Background with gradient */
+body {
+    background: linear-gradient(135deg, #00c6ff, #0072ff);
+    color: #fff;
+    min-height: 100vh;
+}
+
+/* Title */
+h1 {
+    background: linear-gradient(90deg, #1a2a6c, #b21f1f, #fdbb2d);
+    color: white;
+    height: 5rem;
+    line-height: 5rem;
+    font-size: 2.5rem;
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+/* Choices container */
+.choices {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    margin-top: 4rem;
+    flex-wrap: wrap;
+}
+
+/* Each choice circle */
+.choice {
+    height: 165px;
+    width: 165px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+}
+
+.choice:hover {
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.1) rotate(5deg);
+}
+
+/* Images inside choices */
+img {
+    height: 130px;
+    width: 130px;
+    object-fit: cover;
+    border-radius: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.choice:hover img {
+    transform: scale(1.15);
+}
+
+/* Scoreboard */
+.score-board {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.8rem;
+    margin-top: 3rem;
+    gap: 5rem;
+    font-weight: bold;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.5);
+}
+
+#user-score,
+#comp-score {
+    font-size: 4rem;
+    color: #ffeb3b;
+}
+
+/* Message area */
+.msg-container {
+    margin-top: 4rem;
+}
+
+#msg {
+    font-size: 1.8rem;
+    padding: 1rem 2rem;
+    border-radius: 1rem;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0);
+    color: white;
+    display: inline-block;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    transition: all 0.3s ease-in-out;
+    animation: pulse 2s infinite;
+}
+
+/* Message pulse animation */
+@keyframes pulse {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.05); }
+    100% { transform: scale(1); }
+}
